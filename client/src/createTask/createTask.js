@@ -1,15 +1,21 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import styles from "./createTask.module.css";
+import { TaskContext } from "../context/context";
 
-function CreateTask({ addTask }) {
-  const [value, setValue] = useState("");
+function CreateTask() {
+  const { state, dispatch } = useContext(TaskContext);
 
   const handleSubmit = e => {
     e.preventDefault();
-    if (!value) return;
+    if (!state.newTaskInput) return;
 
-    addTask(value);
-    setValue("");
+    dispatch(
+      {
+        type: `ADD_TASK`,
+        payload: { title: state.newTaskInput, completed: false },
+      },
+      dispatch({ type: `HANDLE_INPUT_NEW_TASK`, payload: "" })
+    );
   };
 
   return (
@@ -17,9 +23,11 @@ function CreateTask({ addTask }) {
       <input
         type={`text`}
         className={styles.input}
-        value={value}
+        value={state.newTaskInput}
         placeholder={`Add a new task`}
-        onChange={e => setValue(e.target.value)}
+        onChange={e =>
+          dispatch({ type: `HANDLE_INPUT_NEW_TASK`, payload: e.target.value })
+        }
       />
     </form>
   );
