@@ -28,7 +28,8 @@ function reducer(state, action) {
     case `COMPLETE_TASK`:
       const completeIndex = action.payload;
       const completeTasks = [...state.tasks];
-      completeTasks[completeIndex].completed = true;
+      completeTasks[completeIndex].completed = !completeTasks[completeIndex]
+        .completed;
       return { ...state, tasks: completeTasks };
     case `FILTER_TASKS`:
       const currentTasks = [...state.tasks];

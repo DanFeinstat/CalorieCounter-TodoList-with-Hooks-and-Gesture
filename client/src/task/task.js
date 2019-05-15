@@ -24,7 +24,7 @@ function Task({ task, index }) {
           dispatch({ type: `COMPLETE_TASK`, payload: index });
         }}
       >
-        Complete
+        {completed ? `Incomplete?` : `Complete?`}
       </button>
     </li>
   );
