@@ -13,9 +13,10 @@
   min-width: 146px;
 }
 .button {
-  background: rgb(12, 124, 251);
+  background: red;
   border-radius: 5px;
   margin: 0px 5px;
+  margin-left: auto;
   padding: 3px 5px;
   border: none;
   cursor: pointer;

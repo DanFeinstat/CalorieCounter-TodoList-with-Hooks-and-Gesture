@@ -4,3 +4,6 @@
   border: none;
   padding: 2px;
 }
+.submitBtn {
+  cursor: pointer;
+}
