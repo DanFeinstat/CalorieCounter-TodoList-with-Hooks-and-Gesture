@@ -28,6 +28,9 @@ function Todo() {
       <div className={styles.createTask}>
         <CreateTask />
       </div>
+      <p className={styles.pageInstructions}>
+        Click and drag right to left anywhere on the screen to change pages.
+      </p>
     </div>
     // </div>
   );

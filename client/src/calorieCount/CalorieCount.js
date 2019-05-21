@@ -11,8 +11,11 @@ function CalorieCount() {
     // <div className={styles.pageContainer}>
     <div className={styles.container}>
       <header className={styles.header}>
-        Calorie Count:{state.currentCalories}/{state.totalCalories}
+        Calorie Count: {state.currentCalories}/{state.totalCalories}
       </header>
+      {state.percentDailyCalories > 100 ? (
+        <header className={styles.headerWarning}>GETTING FATTER</header>
+      ) : null}
       <header className={styles.headerTwo}>
         Percent of Daily Calories:{state.percentDailyCalories}%
       </header>
@@ -27,6 +30,9 @@ function CalorieCount() {
       <div className={styleMedia.addFoodItem}>
         <NewFood />
       </div>
+      <p className={styles.pageInstructions}>
+        Click and drag left to right anywhere on the screen to change pages.
+      </p>
     </div>
     // </div>
   );

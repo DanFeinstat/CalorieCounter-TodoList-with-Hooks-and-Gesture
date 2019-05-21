@@ -1,5 +1,4 @@
 .task {
-  border: 1px solid white;
   border-radius: 5px;
   padding: 0.5em;
   margin: 0.5em;
@@ -7,6 +6,10 @@
   flex-direction: row;
   align-items: center;
   min-width: 274px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #c1dfc4 0%, #deecdd 100%);
+  transition: all 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -webkit-transition: all 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .buttonContainer {
   margin-left: auto;
@@ -20,4 +23,13 @@
   border: none;
   cursor: pointer;
   color: white;
+}
+
+@media (min-width: 451px) {
+  .task:hover {
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2),
+      0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    transform: scale(1.02);
+    background: linear-gradient(135deg, #c1dfc4 0%, #deecdd 100%);
+  }
 }
