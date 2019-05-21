@@ -1,14 +1,13 @@
-import React, { useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import { AppContext } from "../context/context";
 import FoodItem from "../foodItem/FoodItem";
 import NewFood from "../newFood/NewFood";
 import styles from "./CalorieCount.module.css";
 
 function CalorieCount() {
-  const { state, displatch } = useContext(AppContext);
+  const { state } = useContext(AppContext);
 
   return (
-    // <div className={styles.pageContainer}>
     <div className={styles.container}>
       <header className={styles.header}>
         Calorie Count: {state.currentCalories}/{state.totalCalories}

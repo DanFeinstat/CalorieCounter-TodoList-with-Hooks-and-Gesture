@@ -6,17 +6,8 @@ import Todo from "../todo/todo";
 import CalorieCount from "../calorieCount/CalorieCount";
 import stickyNotes from "../imgs/stickyNotes.jpg";
 import healthFood from "../imgs/healthFood.jpg";
-import styles from "./PageViewer.module.css";
 
-const pages = [
-  stickyNotes,
-  healthFood,
-  //   "https://images.pexels.com/photos/1509428/pexels-photo-1509428.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-  //   "https://images.pexels.com/photos/351265/pexels-photo-351265.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-  //   "https://images.pexels.com/photos/924675/pexels-photo-924675.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-];
-
-const components = [`Todo`, `CalorieCount`];
+const pages = [stickyNotes, healthFood];
 
 function PageViewer() {
   const index = useRef(0);
