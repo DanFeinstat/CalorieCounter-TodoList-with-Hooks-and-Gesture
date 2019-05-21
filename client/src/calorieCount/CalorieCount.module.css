@@ -1,11 +1,11 @@
 .pageContainer {
   width: 100%;
   height: 100%;
-  /* background: rgb(255, 173, 65); */
+  background: rgb(255, 173, 65);
 }
 
 .container {
-  background: rgba(41, 33, 33, 0.4);
+  /* background: rgb(41, 33, 33); */
   width: 40vw;
   margin: 10em auto;
   min-width: 320px;
@@ -15,6 +15,11 @@
   color: white;
   overflow-y: auto;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(
+    135deg,
+    rgba(210, 153, 194, 0.7) 0%,
+    rgba(254, 249, 215, 0.9) 100%
+  );
 }
 
 .header {
@@ -29,10 +34,17 @@
   text-align: center;
 }
 
+.headerWarning {
+  color: red;
+  margin: 0.5em;
+  font-size: 2em;
+  text-align: center;
+}
+
 .pageInstructions {
   font-size: 0.5em;
 }
 
-.tasks {
+.foodItemList {
   padding: 10px;
 }

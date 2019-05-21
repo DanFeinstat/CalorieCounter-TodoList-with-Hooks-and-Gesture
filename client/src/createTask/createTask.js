@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import styles from "./createTask.module.css";
-import { TaskContext } from "../context/context";
+import { AppContext } from "../context/context";
 
 function CreateTask() {
-  const { state, dispatch } = useContext(TaskContext);
+  const { state, dispatch } = useContext(AppContext);
 
   const handleSubmit = e => {
     e.preventDefault();

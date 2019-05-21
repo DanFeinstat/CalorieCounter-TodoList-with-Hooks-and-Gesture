@@ -1,20 +1,24 @@
 import React, { useEffect, useContext } from "react";
-import { TaskContext } from "../context/context";
+import { AppContext } from "../context/context";
 import Task from "../task/task";
 import CreateTask from "../createTask/createTask";
 import styles from "./todo.module.css";
 
 function Todo() {
-  const { state, dispatch } = useContext(TaskContext);
+  const { state, dispatch } = useContext(AppContext);
 
   useEffect(() => {
-    dispatch({ type: `FILTER_TASKS` });
-  }, [state.tasks]);
+    dispatch({ type: `FILTER_TASKS` }, [state.tasks]);
+  });
 
   return (
+    // <div className={styles.pageContainer}>
     <div className={styles.container}>
       <header className={styles.header}>
         Pending tasks: ({state.remainingTasks})
+      </header>
+      <header className={styles.headerTwo}>
+        Daily Calories: {state.percentDailyCalories}%
       </header>
       <ul className={styles.tasks}>
         {state.tasks.map((task, index) => (
@@ -24,7 +28,11 @@ function Todo() {
       <div className={styles.createTask}>
         <CreateTask />
       </div>
+      <p className={styles.pageInstructions}>
+        Click and drag right to left anywhere on the screen to change pages.
+      </p>
     </div>
+    // </div>
   );
 }
 
