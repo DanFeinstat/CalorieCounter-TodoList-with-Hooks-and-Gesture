@@ -1,9 +1,10 @@
 {
+  "homepage": "https://DanFeinstat.github.io/CalorieCounter-TodoList-with-Hooks-and-Gesture",
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://DanFeinstat.github.io/CalorieCounter-TodoList-with-Hooks-and-Gesture",
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "lodash-es": "^4.17.11",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
