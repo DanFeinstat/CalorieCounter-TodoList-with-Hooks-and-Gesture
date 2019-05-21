@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/DanFeinstat/PlayingWithHooks",
+  "homepage": "https://DanFeinstat.github.io/CalorieCounter-TodoList-with-Hooks-and-Gesture",
   "dependencies": {
     "lodash-es": "^4.17.11",
     "react": "^16.8.6",
